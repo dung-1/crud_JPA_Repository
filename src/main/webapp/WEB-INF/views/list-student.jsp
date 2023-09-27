@@ -29,10 +29,10 @@
 				<div class="panel-body">
 					<table class="table table-striped table-bordered">
 						<tr>
+							<th>CCCD</th>
 							<th>Họ Tên</th>
 							<th>Ngày sinh</th>
 							<th>Địa chỉ hiện tại</th>
-							<th>CCCD</th>
 							<th>Giới tính</th>
 							<th>Quê Quán</th>
 							<th>Khóa học</th>
@@ -59,7 +59,6 @@
 								<td>${tempCustomer.cccd}</td>
 								<td>${tempCustomer.gioiTinh}</td>
 								<td>${tempCustomer.queQuan}</td>
-								<td>${tempCustomer.cours.name}</td>
 
 
 								<!-- display the update link -->
