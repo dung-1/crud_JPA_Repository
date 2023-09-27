@@ -21,7 +21,7 @@
 					<div class="panel-title">Add SinhVien</div>
 				</div>
 				<div class="panel-body">
-					<form:form action="saveSinhVien" cssClass="form-horizontal" method="post" modelAttribute="sinhvien">
+					<form:form action="saveStudent" cssClass="form-horizontal" method="post" modelAttribute="students">
 						<div class="form-group">
 							<label for="masv" class="col-md-3 control-label">Mã SinhVien</label>
 							<div class="col-md-9">
@@ -39,42 +39,43 @@
 						<div class="form-group">
 							<label for="diachihientai" class="col-md-3 control-label">Địa Chỉ Hiện Tại</label>
 							<div class="col-md-9">
-								<form:input path="diachihientai" cssClass="form-control" maxlength="250" />
-								<form:errors path="diachihientai" cssClass="error" />
+								<form:input path="diaChi" cssClass="form-control" maxlength="250" />
+								<form:errors path="diaChi" cssClass="error" />
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="gioitinh" class="col-md-3 control-label">Giới Tính</label>
 							<div class="col-md-9">
-								<form:input path="gioitinh" cssClass="form-control" maxlength="250" />
-								<form:errors path="gioitinh" cssClass="error" />
+								<form:input path="gioiTinh" cssClass="form-control" maxlength="250" />
+								<form:errors path="gioiTinh" cssClass="error" />
 							</div>
 						</div>
+						
 						<div class="form-group">
-							<label for="hoten" class="col-md-3 control-label">Họ Tên</label>
+							<label for="ngaySinh" class="col-md-3 control-label">Ngày Sinh</label>
 							<div class="col-md-9">
-								<form:input path="hoten" cssClass="form-control" required="required" maxlength="250" />
-								<form:errors path="hoten" cssClass="error" />
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="ngaysinh" class="col-md-3 control-label">Ngày Sinh</label>
-							<div class="col-md-9">
-								<form:input path="ngaysinh" type="date" cssClass="form-control" />
-								<form:errors path="ngaysinh" cssClass="error" />
+								<form:input path="ngaySinh" type="date" cssClass="form-control" />
+								<form:errors path="ngaySinh" cssClass="error" />
 							</div>
 						</div>
 						<div class="form-group"><label for="quequan" class="col-md-3 control-label">Quê Quán</label>
 							<div class="col-md-9">
-								<form:input path="quequan" cssClass="form-control" maxlength="250" />
-								<form:errors path="quequan" cssClass="error" />
+								<form:input path="queQuan" cssClass="form-control" maxlength="250" />
+								<form:errors path="queQuan" cssClass="error" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="khoahoc" class="col-md-3 control-label">Khoa Hoc</label>
+							<label for="province" class="col-md-3 control-label">Khóa Học</label>
 							<div class="col-md-9">
-								<form:input path="khoahoc" cssClass="form-control" maxlength="250" />
-								<form:errors path="khoahoc" cssClass="error" />
+								<form:select path = "cours" cssClass="form-control">
+				                     <form:option value = "" label = "Select"/>
+				                     <c:forEach var="provin" items="${cours}">
+      									<form:option value="${provin.id }" label="${provin.name}" 
+      									selected="${provin.id==student.cours.id?'selected':''}"
+      									/>
+   									 </c:forEach>
+   
+				                  </form:select> 
 							</div>
 						</div>
 						<div class="form-group">

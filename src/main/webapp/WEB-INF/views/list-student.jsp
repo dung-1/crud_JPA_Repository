@@ -19,20 +19,19 @@
 				MySQL Example - Customer Management</h3>
 			<hr />
 
-			<input type="button" value="Add Customer"
+			<input type="button" value="Add Student"
 				onclick="window.location.href='showForm'; return false;"
 				class="btn btn-primary" /> <br /> <br />
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<div class="panel-title">Customer List</div>
+					<div class="panel-title">Student List</div>
 				</div>
 				<div class="panel-body">
 					<table class="table table-striped table-bordered">
 						<tr>
-							<th>CCCD</th>
-							<th>Họ Tên</th>
 							<th>Ngày sinh</th>
 							<th>Địa chỉ hiện tại</th>
+							<th>CCCD</th>
 							<th>Giới tính</th>
 							<th>Quê Quán</th>
 							<th>Khóa học</th>
@@ -40,27 +39,25 @@
 						</tr>
 
 						<!-- loop over and print our customers -->
-						<c:forEach var="tempCustomer" items="${student}">
-
+						<c:forEach var="student" items="${students}">
 							<!-- construct an "update" link with customer id -->
 							<c:url var="updateLink" value="/student/updateForm">
-								<c:param name="studentId" value="${tempCustomer.id}" />
+								<c:param name="studentId" value="${student.id}" />
 							</c:url>
 
 							<!-- construct an "delete" link with customer id -->
 							<c:url var="deleteLink" value="/student/delete">
-								<c:param name="studentId" value="${tempCustomer.id}" />
+								<c:param name="studentId" value="${student.id}" />
 							</c:url>
 
 							<tr>
-								<td>${tempCustomer.hoTen}</td>
-								<td>${tempCustomer.ngaySinh}</td>
-								<td>${tempCustomer.diaChi}</td>
-								<td>${tempCustomer.cccd}</td>
-								<td>${tempCustomer.gioiTinh}</td>
-								<td>${tempCustomer.queQuan}</td>
-
-
+								<td>${student.ngaySinh}</td>
+								<td>${student.diaChi}</td>
+								<td>${student.cccd}</td>
+								<td>${student.gioiTinh}</td>
+								<td>${student.queQuan}</td>
+								<td>${student.cours.name}</td>
+								<td>
 								<!-- display the update link -->
 								<a href="${updateLink}">Update</a> |
 								<a href="${deleteLink}"

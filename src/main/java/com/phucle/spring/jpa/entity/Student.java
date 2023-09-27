@@ -25,11 +25,10 @@ public class Student {
 	@Column(name="id")
 	private int id;
 	
-	@Column(name="hoTen")
-	private String hoten;
+
 	
 	@Column(name="ngaySinh")
-	private String lastName;
+	private String ngaySinh;
 	
 	@Column(name="diaChi")
 	private String diaChi;
@@ -46,20 +45,81 @@ public class Student {
 	@ManyToOne
     @JoinColumn(name = "cours_id")
     private Cours cours;
+
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Student(int id, String ngaySinh, String diaChi, String cccd, String gioiTinh, String queQuan, Cours cours) {
+		super();
+		this.id = id;
+		this.ngaySinh = ngaySinh;
+		this.diaChi = diaChi;
+		this.cccd = cccd;
+		this.gioiTinh = gioiTinh;
+		this.queQuan = queQuan;
+		this.cours = cours;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNgaySinh() {
+		return ngaySinh;
+	}
+
+	public void setNgaySinh(String ngaySinh) {
+		this.ngaySinh = ngaySinh;
+	}
+
+	public String getDiaChi() {
+		return diaChi;
+	}
+
+	public void setDiaChi(String diaChi) {
+		this.diaChi = diaChi;
+	}
+
+	public String getCccd() {
+		return cccd;
+	}
+
+	public void setCccd(String cccd) {
+		this.cccd = cccd;
+	}
+
+	public String getGioiTinh() {
+		return gioiTinh;
+	}
+
+	public void setGioiTinh(String gioiTinh) {
+		this.gioiTinh = gioiTinh;
+	}
+
+	public String getQueQuan() {
+		return queQuan;
+	}
+
+	public void setQueQuan(String queQuan) {
+		this.queQuan = queQuan;
+	}
+
+	public Cours getCours() {
+		return cours;
+	}
+
+	public void setCours(Cours cours) {
+		this.cours = cours;
+	}
+
 	
-	
-	
 
-
-
-	/**
-	 * @return the province
-	 */
-
-
-	/**
-	 * @return the hobbies
-	 */
 
 	
 	

@@ -56,6 +56,35 @@ public class Cours {
 	}
 
 
+	public Cours(int id, String name, String nienKhoa, List<Student> students) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.nienKhoa = nienKhoa;
+		this.students = students;
+	}
+
+
+	public String getNienKhoa() {
+		return nienKhoa;
+	}
+
+
+	public void setNienKhoa(String nienKhoa) {
+		this.nienKhoa = nienKhoa;
+	}
+
+
+	public List<Student> getStudents() {
+		return students;
+	}
+
+
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
+
+
 	
 	
 
