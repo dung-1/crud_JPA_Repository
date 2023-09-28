@@ -25,7 +25,8 @@ public class Student {
 	@Column(name="id")
 	private int id;
 	
-
+	@Column(name="hoTen")
+	private String hoTen;
 	
 	@Column(name="ngaySinh")
 	private String ngaySinh;
@@ -51,9 +52,13 @@ public class Student {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(int id, String ngaySinh, String diaChi, String cccd, String gioiTinh, String queQuan, Cours cours) {
+
+
+	public Student(int id, String hoTen, String ngaySinh, String diaChi, String cccd, String gioiTinh, String queQuan,
+			Cours cours) {
 		super();
 		this.id = id;
+		this.hoTen = hoTen;
 		this.ngaySinh = ngaySinh;
 		this.diaChi = diaChi;
 		this.cccd = cccd;
@@ -61,6 +66,20 @@ public class Student {
 		this.queQuan = queQuan;
 		this.cours = cours;
 	}
+
+
+
+	public String getHoTen() {
+		return hoTen;
+	}
+
+
+
+	public void setHoTen(String hoTen) {
+		this.hoTen = hoTen;
+	}
+
+
 
 	public int getId() {
 		return id;

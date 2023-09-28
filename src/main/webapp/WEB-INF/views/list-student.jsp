@@ -29,6 +29,7 @@
 				<div class="panel-body">
 					<table class="table table-striped table-bordered">
 						<tr>
+							<th>Họ Tên</th>
 							<th>Ngày sinh</th>
 							<th>Địa chỉ hiện tại</th>
 							<th>CCCD</th>
@@ -51,6 +52,7 @@
 							</c:url>
 
 							<tr>
+								<td>${student.hoTen}</td>
 								<td>${student.ngaySinh}</td>
 								<td>${student.diaChi}</td>
 								<td>${student.cccd}</td>
@@ -58,9 +60,8 @@
 								<td>${student.queQuan}</td>
 								<td>${student.cours.name}</td>
 								<td>
-								<!-- display the update link -->
-								<a href="${updateLink}">Update</a> |
-								<a href="${deleteLink}"
+									<!-- display the update link --> <a href="${updateLink}">Update</a>
+									| <a href="${deleteLink}"
 									onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a>
 								</td>
 

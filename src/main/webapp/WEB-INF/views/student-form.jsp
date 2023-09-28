@@ -23,10 +23,10 @@
 				<div class="panel-body">
 					<form:form action="saveStudent" cssClass="form-horizontal" method="post" modelAttribute="students">
 						<div class="form-group">
-							<label for="masv" class="col-md-3 control-label">Mã SinhVien</label>
+							<label for="hoTen" class="col-md-3 control-label">Họ Tên </label>
 							<div class="col-md-9">
-								<form:input path="id" cssClass="form-control" required="required" maxlength="250" />
-								<form:errors path="id" cssClass="error" />
+								<form:input path="hoTen" cssClass="form-control" required="required" maxlength="250" />
+								<form:errors path="hoTen" cssClass="error" />
 							</div>
 						</div>
 						<div class="form-group">
